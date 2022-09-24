@@ -7,7 +7,7 @@
   --light-color: #777;
   --light-bg: #eee;
   --container-bg: #000030;
-  --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 0.3125rem 0.625rem rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -23,7 +23,7 @@
 }
 
 html::-webkit-scrollbar {
-  width: 10px;
+  width: 0.625rem;
 }
 
 html::-webkit-scrollbar-track {
@@ -32,23 +32,23 @@ html::-webkit-scrollbar-track {
 
 html::-webkit-scrollbar-thumb {
   background: var(--white);
-  border-radius: 50px;
+  border-radius: 3.125rem;
 }
 
 .title {
-  font-size: 25px;
+  font-size: 1.5625rem;
   color: var(--blue);
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
 }
 
 .container {
-  padding: 100px 9%;
+  padding: 6.25rem 9%;
   background: #000030;
   display: flex;
   flex-direction: column;
 }
 
-.details {
+.profile-container {
   width: 100%;
   display: flex;
   background: var(--light-bg);
@@ -57,29 +57,29 @@ html::-webkit-scrollbar-thumb {
 /* Profile */
 
 .profile {
-  flex: 1 1 400px;
+  flex: 1 1 25%;
   background: var(--white);
-  padding: 20px 30px;
+  padding: 1.25rem 1.875rem;
   text-align: center;
 }
 
 .profile img {
-  height: 150px;
-  width: 150px;
+  height: 9.375rem;
+  width: 9.375rem;
   border-radius: 50%;
-  border: 1px solid var(--black);
+  border: 0.0625rem solid var(--black);
   object-fit: cover;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .btn {
-  margin-top: 10px;
+  margin-top: 0.625rem;
   display: inline-block;
-  padding: 7px 20px;
-  border-radius: 5px;
+  padding: 0.4375rem 1.25rem;
+  border-radius: 0.3125rem;
   background: var(--blue);
   color: var(--white);
-  font-size: 17px;
+  font-size: 1.0625rem;
   box-shadow: var(--box-shadow);
 }
 
@@ -89,7 +89,7 @@ html::-webkit-scrollbar-thumb {
 
 .profile h3 {
   color: var(--black);
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .profile .contact-info {
@@ -98,21 +98,21 @@ html::-webkit-scrollbar-thumb {
 
 .profile p {
   color: var(--blue);
-  padding: 5px 0;
-  margin-bottom: 10px;
-  font-size: 15px;
+  padding: 0.3125rem 0;
+  margin-bottom: 0.625rem;
+  font-size: 0.9375rem;
   font-weight: 900;
 }
 
 .share {
-  margin: 10px 0;
+  margin: 0.625rem 0;
 }
 
 .share a i {
-  height: 50px;
-  width: 50px;
-  line-height: 50px;
-  font-size: 20px;
+  height: 3.125rem;
+  width: 3.125rem;
+  line-height: 3.125rem;
+  font-size: 1.25rem;
   border-radius: 50%;
   color: var(--black);
   background: var(--light-bg);
@@ -127,15 +127,15 @@ html::-webkit-scrollbar-thumb {
 
 /* About */
 .about {
-  flex: 1 1 1000px;
+  flex: 1 1 75%;
   background: var(--white);
-  padding: 20px 30px;
+  padding: 1.25rem 1.875rem;
 }
 
 .about p {
-  font-size: 17px;
+  font-size: 1.0625rem;
   line-height: 2;
-  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
   color: var(--light-color);
 }
 
@@ -143,25 +143,25 @@ html::-webkit-scrollbar-thumb {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 25px;
+  margin-top: 1.5625rem;
   flex-wrap: wrap;
 }
 
 .about .contact {
   display: flex;
-  margin-top: 18px;
+  margin-top: 1.125rem;
 }
 
 .about .contact i {
-  height: 40px;
-  width: 40px;
-  line-height: 40px;
-  font-size: 15px;
+  height: 2.5rem;
+  width: 2.5rem;
+  line-height: 2.5rem;
+  font-size: 0.9375rem;
   border-radius: 50%;
   background: var(--blue);
   color: var(--white);
   text-align: center;
-  margin-right: 10px;
+  margin-right: 0.625rem;
 }
 
 .info-container {
@@ -169,29 +169,25 @@ html::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: column;
   background-color: var(--white);
+  padding: 3.125rem;
 }
 
-.info-container-wrapper {
-  width: 100%;
-  padding: 50px;
-}
-
-.info-container-wrapper .box-container {
+.info-container .box-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 0.9375rem;
 }
 
-.info-container-wrapper .box-container .box {
-  flex: 1 1 300px;
+.info-container .box-container .box {
+  flex: 1 1 18.75rem;
 }
 
 .progress h3 {
-  padding: 10px 0;
+  padding: 0.625rem 0;
   display: flex;
   justify-content: space-between;
   color: var(--black);
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 
 .progress h3 span {
@@ -200,8 +196,8 @@ html::-webkit-scrollbar-thumb {
 
 .progress .bar {
   overflow: hidden;
-  border-radius: 50px;
-  height: 10px;
+  border-radius: 3.125rem;
+  height: 0.625rem;
   background: var(--light-bg);
 }
 
@@ -209,7 +205,7 @@ html::-webkit-scrollbar-thumb {
   background: var(--blue);
   height: 100%;
   display: block;
-  border-radius: 50px;
+  border-radius: 3.125rem;
 }
 
 .box:first-child .progress:nth-child(1) .bar span {
@@ -247,19 +243,22 @@ html::-webkit-scrollbar-thumb {
 /* Experience and education */
 
 .exp-edn {
-  flex: 1 1 250px;
+  flex: 1 1 15.625rem;
   color: var(--light-color);
   display: flex;
-  margin-top: 50px;
   flex-direction: column;
 }
 
+#education {
+  margin-top: 4.6875rem;
+}
+
 .exp-edn .box {
-  border: 1px solid transparent;
-  padding: 20px;
+  border: 0.0625rem solid transparent;
+  padding: 1.25rem;
   background: var(--light-bg);
-  margin-bottom: 10px;
-  border-radius: 5px;
+  margin-bottom: 0.625rem;
+  border-radius: 0.3125rem;
 }
 
 .exp-edn .box h3 {
@@ -267,40 +266,40 @@ html::-webkit-scrollbar-thumb {
 }
 
 .exp-edn .box i {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .info-container ul {
-  padding-left: 20px;
+  padding-left: 1.25rem;
 }
 
 .exp-edn .edu {
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 600;
   color: var(--black);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .container {
     flex-flow: column;
     justify-content: center;
   }
 
-  .info-container-wrapper {
-    padding: 20px 30px;
+  .info-container {
+    padding: 1.25rem 1.875rem;
   }
 
-  .details {
+  .profile-container {
     flex-flow: column;
-    border-radius: 10px;
+    border-radius: 0.625rem;
   }
 
   .about {
-    flex: 1 1 340px;
+    flex: 1 1 21.25rem;
   }
 
   .about p {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 
   .about .reach-me {
@@ -313,37 +312,37 @@ html::-webkit-scrollbar-thumb {
 
   .profile .contact-info {
     color: var(--black);
-    font-size: 20px;
+    font-size: 1.25rem;
     display: block;
-    line-height: 40px;
+    line-height: 2.5rem;
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 28.125rem) {
   .about {
     flex: 1;
   }
 
   .container {
-    padding: 50px 9%;
+    padding: 3.125rem 9%;
   }
 
-  .details {
+  .profile-container {
     width: 100%;
   }
 
   .profile {
-    padding-top: 60px;
+    padding-top: 3.75rem;
   }
 
   .about .btn {
     width: 100%;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
 
   .about p {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 
   .about .reach-me {
