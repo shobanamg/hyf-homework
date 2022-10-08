@@ -8,86 +8,84 @@
     <link rel="stylesheet" href="style1.css" />
   </head>
   <body>
-    <main>
-      <!-- Navbar Section -->
-      <nav class="navbar">
-        <div class="navbar-container">
-          <ul class="menu-items">
-            <li><a class="active" href="#home">Home</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#offer">Today's Deals</a></li>
-            <li><a href="#contactUs">Contact us</a></li>
-          </ul>
-          <div class="logo"><img src="./img/logo.png" alt="logo" /></div>
-        </div>
-      </nav>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <ul class="menu-items">
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#offer">Today's Deals</a></li>
+          <li><a href="#contactUs">Contact us</a></li>
+        </ul>
+        <div class="logo"><img src="./img/logo.png" alt="logo" /></div>
+      </div>
+    </nav>
 
-      <section class="form-container">
-        <div class="form-wrapper">
-          <div class="status-container">
-            <h2>Step 4/4 - Payment</h2>
-            <div class="progress4">
-              <h3>Progress</h3>
-              <div class="bar"><span></span></div>
-            </div>
-            <p>Please fill in your payment data:</p>
+    <section class="form-container">
+      <div class="form-wrapper">
+        <div class="status-container">
+          <h2>Step 4/4 - Payment</h2>
+          <div class="progress4">
+            <h3>Progress</h3>
+            <div class="bar"><span></span></div>
           </div>
-          <form action="#" method="get">
-            <div class="personal-info">
-              <label for="card-name">Name on card</label>
-              <input type="text" id="card-name" name="card-name" />
-            </div>
-            <div class="personal-info">
-              <label for="card-type">Card Type</label>
-              <input type="text" id="card-type" name="card-type" />
-            </div>
-            <div class="personal-info">
-              <div>
-                <label for="card-num">Credit Card Number</label>
-                <input
-                  type="number"
-                  id="card-num"
-                  name="card-num"
-                  maxlength="16"
-                />
-              </div>
-              <div>
-                <label for="first-name">First Name</label>
-                <input type="text" id="first-name" name="first-name" />
-              </div>
-            </div>
-            <div class="personal-info">
-              <div>
-                <label for="expiry-month">Expiry Month and year</label>
-                <input type="month" id="expiry-month" name="expiry-month" />
-              </div>
-              <div>
-                <label for="ccv">CCV</label>
-                <input
-                  type="tel"
-                  id="ccv"
-                  name="ccv"
-                  maxlength="3"
-                  pattern="[1-9][0-9]{3}"
-                />
-              </div>
-            </div>
-
-            <div class="next-btn">
-              <a href="index3.html"
-                ><button type="button" id="button" class="button-next">
-                  Previous
-                </button></a
-              >
-              <a href="#"
-                ><button type="submit" id="button" class="button-next">
-                  Submit
-                </button></a
-              >
-            </div>
-          </form>
+          <p>Please fill in your payment data:</p>
         </div>
-      </section>
-    </main>
+        <form action="#" method="get">
+          <div class="personal-info">
+            <label for="card-name">Name on card</label>
+            <input type="text" id="card-name" name="card-name" />
+          </div>
+          <div class="personal-info">
+            <label for="card-type">Card Type</label>
+            <input type="text" id="card-type" name="card-type" />
+          </div>
+          <div class="personal-info">
+            <div>
+              <label for="card-num">Credit Card Number</label>
+              <input
+                type="number"
+                id="card-num"
+                name="card-num"
+                maxlength="16"
+              />
+            </div>
+            <div>
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="firstName" />
+            </div>
+          </div>
+          <div class="personal-info">
+            <div>
+              <label for="expiry-month">Expiry Month and year</label>
+              <input type="month" id="expiry-month" name="expiry-month" />
+            </div>
+            <div>
+              <label for="ccv">CCV</label>
+              <input
+                type="tel"
+                id="ccv"
+                name="ccv"
+                maxlength="3"
+                pattern="[1-9][0-9]{3}"
+              />
+            </div>
+          </div>
+
+          <div class="next-btn">
+            <a href="index3.html"
+              ><button type="button" id="sub-button" class="button-next">
+                Previous
+              </button></a
+            >
+            <a href="#"
+              ><button type="submit" id="button" class="button-next">
+                Submit
+              </button></a
+            >
+          </div>
+        </form>
+      </div>
+    </section>
   </body>
 </html>

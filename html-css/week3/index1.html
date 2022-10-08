@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style1.css" />
   </head>
   <body>
-    <main>
     <!-- Navbar Section -->
     <nav class="navbar">
       <div class="navbar-container">
@@ -22,6 +21,7 @@
       </div>
     </nav>
 
+    <!-- Article Section -->
     <article>
       <h1>Sign up to <span>yourcustomtailor.com</span></h1>
       <p>
@@ -35,6 +35,8 @@
         need to know a few details about you first...
       </p>
     </article>
+
+    <!-- Form Section -->
     <section class="form-container">
       <div class="form-wrapper">
         <div class="status-container">
@@ -43,160 +45,166 @@
             <h3>Progress</h3>
             <div class="bar"><span></span></div>
           </div>
-          <p>Nice to meet you. Lets spend a minute to get to know each other?please
-             enter the following:
+          <p>
+            Nice to meet you. Lets spend a minute to get to know each
+            other?please enter the following:
           </p>
         </div>
         <form action="#" method="get">
           <div class="name-info personal-info">
             <div>
-            <label for="first-name">First Name<span>*</span></label>
-              <input
-                type="text"
-                id="first-name"
-                name="first-name"
-                required
-              />
-              </div>
-              <div>
-              <label for="last-name">Last Name<span>*</span></label>
-              <input
-                type="text"
-                id="last-name"
-                name="last-name"
-                required
-              /></div>
-        </div>
-        <div class="country-info personal-info">
-          <label for="country">Country<span>*</span></label>
-          <select name="country" id="country" required>
-            <option value="country">country</option>
-            <option value="country">india</option>
-            <option value="country">bangladesh</option>
-            <option value="country">china</option>
-            <option value="country">thailand</option>
-            <option value="country">ukrain</option>
-            <option value="country">jappan</option>
-            <option value="country">denmark</option>
-          </select>
-        </div>
-        <div class="address-info personal-info">
-          <div>
-          <label for="street-address">Street Address<span>*</span></label>
-          <input
-            type="text"
-            id="street-address"
-            name="street-address"
-            required
-          />
-          </div>
-          <div>
-          <label for="post-code">Post Code<span>*</span></label>
-          <input
-            type="text"
-            id="post-code"
-            name="post-code"
-            pattern="\d{4}" maxlength="4" title="Please enter only numbers" 
-            required
-          />
-          </div>
-        </div>
-        <div class="profile-info personal-info">
-          <div><label for="profile-description" class="profile-desc">Profile Description
-            <span
-              >please provide a short description of yourself to be displaced on
-              our social community pages.</span
-          ></div>
-          <div>
-          <textarea
-            name="profile-description"
-            id="profile-description"
-            maxlength="500"
-          ></textarea></div>
-        </div>
-        <div class="address2">
-          <p>
-            Use the same for billing and shipping? Uncheck below to fill out a
-            separate shipping address.
-          </p>
-        </div>
-        <div class="personal-info1">
-          <label for="checkbox-shipping" class="label-checkbox-shippping">Shipping Address:</label>
-          <input type="checkbox" id="checkbox-shipping" checked/>
-           <div class="shipping-address">
-                <p>New Shipping address:</p>
-                <div class="name-info personal-info">
-            <label for="first-name">First Name<span>*</span></label>
-              <input
-                type="text"
-                id="first-name"
-                name="first-name"
-                required
-              />
-              <label for="last-name">Last Name<span>*</span></label>
-              <input
-                type="text"
-                id="last-name"
-                name="last-name"
-                required
-              />
-        </div>
-        <div class="country-info personal-info">
-          <label for="country">Country<span>*</span></label>
-          <select name="country" id="country" required>
-            <option value="country">country</option>
-            <option value="country">india</option>
-            <option value="country">bangladesh</option>
-            <option value="country">china</option>
-            <option value="country">thailand</option>
-            <option value="country">ukrain</option>
-            <option value="country">jappan</option>
-            <option value="country">denmark</option>
-          </select>
-        </div>
-        <div class="address-info personal-info">
-          <label for="street-address">Street Address<span>*</span></label>
-          <input
-            type="text"
-            id="street-address"
-            name="street-address"
-            required
-          />
-          <label for="post-code">Post Code<span>*</span></label>
-          <input
-            type="text"
-            id="post-code"
-            name="post-code"
-            pattern="\d{4}" maxlength="4" title="Please enter only numbers" 
-            required
-          />
-        </div>
-        <div class="personal-info">
-          <div><label for="profile-description" class="profile-desc">Profile Description
-            <span
-              >please provide a short description of yourself to be displaced on
-              our social community pages.</span
-          ></div>
-          <div>
-          <textarea
-            name="profile-description"
-            id="profile-description"
-            maxlength="500"
-          ></textarea></div>
-        </div>        
-      </div>
-          </div>
-           <div class="next-btn"> 
-                    <a href="#"
-                ><button type="submit" id="button" class="button-next">
-                  Submit
-                </button></a
-              >
-                    <a href="index2.html"><button type="button" id="button" class="button-next">Next</button></a>
+              <label for="firstname">First Name<span>*</span></label>
+              <input type="text" id="firstname" name="first-name" required />
             </div>
-      </form>
+            <div>
+              <label for="last-name">Last Name<span>*</span></label>
+              <input type="text" id="lastname" name="last-name" required />
+            </div>
+          </div>
+
+          <div class="country-info personal-info">
+            <label for="country">Country<span>*</span></label>
+            <select name="country" id="countrySelect" required>
+              <option value="">India</option>
+              <option value="">Bangladesh</option>
+              <option value="">China</option>
+              <option value="">Thailand</option>
+              <option value="">Ukraine</option>
+              <option value="">Japan</option>
+              <option value="">Denmark</option>
+            </select>
+          </div>
+
+          <div class="address-info personal-info">
+            <div>
+              <label for="streetAddress">Street Address<span>*</span></label>
+              <input
+                type="text"
+                id="streetAddress"
+                name="street-address"
+                required
+              />
+            </div>
+            <div>
+              <label for="postalCode">Post Code<span>*</span></label>
+              <input
+                type="text"
+                id="postalCode"
+                name="post-code"
+                pattern="\d{4}"
+                maxlength="4"
+                title="Please enter only numbers"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="profile-info personal-info">
+            <div>
+              <label for="profileDescription" class="profile-desc"
+                >Profile Description</label
+              >
+              <span>
+                please provide a short description of yourself to be displaced
+                on our social community pages.
+              </span>
+            </div>
+            <div>
+              <textarea
+                name="profile-description"
+                id="profileDescription"
+                maxlength="500"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="address2">
+            <p>
+              Use the same for billing and shipping? Uncheck below to fill out a
+              separate shipping address.
+            </p>
+          </div>
+
+          <div class="personal-info1">
+            <label for="checkbox-shipping" class="label-checkbox-shippping"
+              >Shipping Address:</label
+            >
+            <input type="checkbox" id="checkbox-shipping" checked />
+            <div class="shipping-address">
+              <p>New Shipping address:</p>
+              <div class="name-info personal-info">
+                <label for="first-name">First Name<span>*</span></label>
+                <input type="text" id="first-name" name="first-name" required />
+                <label for="last-name">Last Name<span>*</span></label>
+                <input type="text" id="last-name" name="last-name" required />
+              </div>
+              <div class="country-info personal-info">
+                <label for="country">Country<span>*</span></label>
+                <select name="country" id="country" required>
+                  <option value="country">country</option>
+                  <option value="country">india</option>
+                  <option value="country">bangladesh</option>
+                  <option value="country">china</option>
+                  <option value="country">thailand</option>
+                  <option value="country">ukrain</option>
+                  <option value="country">jappan</option>
+                  <option value="country">denmark</option>
+                </select>
+              </div>
+              <div class="address-info personal-info">
+                <label for="street-address">Street Address<span>*</span></label>
+                <input
+                  type="text"
+                  id="street-address"
+                  name="street-address"
+                  required
+                />
+                <label for="post-code">Post Code<span>*</span></label>
+                <input
+                  type="text"
+                  id="post-code"
+                  name="post-code"
+                  pattern="\d{4}"
+                  maxlength="4"
+                  title="Please enter only numbers"
+                  required
+                />
+              </div>
+              <div class="personal-info">
+                <div>
+                  <label for="profile-description" class="profile-desc"
+                    >Profile Description</label
+                  >
+                  <span
+                    >please provide a short description of yourself to be
+                    displaced on our social community pages.</span
+                  >
+                </div>
+                <div>
+                  <textarea
+                    name="profile-description"
+                    id="profile-description"
+                    maxlength="500"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="next-btn">
+            <a href="#"
+              ><button type="submit" id="sub-button" class="button-next">
+                Submit
+              </button></a
+            >
+            <a href="index2.html"
+              ><button type="button" id="button" class="button-next">
+                Next
+              </button></a
+            >
+          </div>
+        </form>
       </div>
     </section>
-   </main>
   </body>
 </html>

@@ -175,7 +175,7 @@ article h1 span {
 
 @keyframes bar2 {
   0% {
-    width: 0;
+    width: 25%;
   }
   100% {
     width: 50%;
@@ -184,7 +184,7 @@ article h1 span {
 
 @keyframes bar3 {
   0% {
-    width: 0;
+    width: 50%;
   }
   100% {
     width: 75%;
@@ -193,7 +193,7 @@ article h1 span {
 
 @keyframes bar4 {
   0% {
-    width: 0;
+    width: 75%;
   }
   100% {
     width: 100%;
@@ -237,19 +237,11 @@ article h1 span {
   display: flex;
 }
 
-.name-info div:nth-child(2),
-.address-info div:nth-child(2),
-.profile-info div:nth-child(2) {
-  margin-left: 5rem;
-}
-
 .personal-info label {
-  flex-basis: 12.5rem;
+  flex-basis: 8rem;
   flex-grow: 0;
   flex-shrink: 0;
   margin-left: 20px;
-  /* text-align: left; */
-  /* padding-left: 4.5rem; */
 }
 
 .personal-info div {
@@ -284,13 +276,14 @@ label:not(.profile-desc) span {
   color: crimson;
 }
 
-.profile-desc span {
+.profile-info span {
   display: block;
   max-width: 17ch;
   font-style: italic;
   font-size: 0.9rem;
   font-weight: 100;
   margin-top: 1rem;
+  padding-left: 1.5rem;
 }
 
 .form-wrapper form input,
@@ -508,12 +501,6 @@ label:not(.profile-desc) span {
     border-bottom: 1px solid var(--orange);
     transition: color 0.3s ease-in-out;
     color: var(--orange);
-  }
-
-  .name-info div:nth-child(2),
-  .address-info div:nth-child(2),
-  .profile-info div:nth-child(2) {
-    margin-left: 0rem;
   }
 
   .personal-info textarea {
