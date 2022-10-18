@@ -14,7 +14,7 @@ const julie = {
   houseCost: 1000000,
 };
 
-//peters house price calculation
+//peter's house price calculation
 let volumeInMeters2 = peter.wide * peter.deep * peter.high;
 console.log(volumeInMeters2);
 
@@ -30,7 +30,7 @@ if (housePrice < peter.houseCost) {
 } else {
   console.log(
     `peter is paying too little. i.e ${
-      peter.houseCost - housePrice
+      housePrice - peter.houseCost
     } less than actual price of the house.`
   );
 }
