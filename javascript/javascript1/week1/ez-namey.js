@@ -11,7 +11,7 @@ const firstWords = [
   "silver",
 ];
 
-const secondtWords = [
+const secondWords = [
   "Adventures",
   "Paragon",
   "catering",
@@ -25,7 +25,7 @@ const secondtWords = [
 ];
 
 const randomNumber = Math.floor(Math.random() * 10);
-const startupName = firstWords[randomNumber] + " " + secondtWords[randomNumber];
+const startupName = firstWords[randomNumber] + " " + secondWords[randomNumber];
 console.log(
   `The Startup: ${startupName} contains ${startupName.length} characters`
 );

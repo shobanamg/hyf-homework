@@ -25,7 +25,7 @@ if (housePrice < peter.houseCost) {
   console.log(
     `peter is paying too much. i.e ${
       peter.houseCost - housePrice
-    } more than actualprice of the house`
+    } more than actual price of the house`
   );
 } else {
   console.log(
@@ -46,7 +46,7 @@ if (housePrice < julie.houseCost) {
   console.log(
     `julie is paying too much. i.e ${
       julie.houseCost - housePrice
-    } more than actualprice of the house`
+    } more than actual price of the house`
   );
 } else {
   console.log(
