@@ -24,8 +24,8 @@ const secondtWords = [
   "singles",
 ];
 
-let randomNumber = Math.floor(Math.randome * 10);
-let startupName = firstWords[randomNumber] + secondtWords[randomNumber];
+const randomNumber = Math.floor(Math.random() * 10);
+const startupName = firstWords[randomNumber] + " " + secondtWords[randomNumber];
 console.log(
-  `The Startup: ${startupName} contains ${startupName.lenth} characters`
+  `The Startup: ${startupName} contains ${startupName.length} characters`
 );
