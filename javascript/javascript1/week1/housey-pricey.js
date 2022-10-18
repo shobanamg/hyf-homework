@@ -16,20 +16,18 @@ const julie = {
 
 //peter's house price calculation
 let volumeInMeters2 = peter.wide * peter.deep * peter.high;
-console.log(volumeInMeters2);
 
 let housePrice = volumeInMeters2 * 2.5 * 1000 + peter.gardenSizeInM2 * 300;
-console.log(housePrice);
 
 if (housePrice < peter.houseCost) {
   console.log(
-    `peter is paying too much. i.e ${
+    `Peter is paying too much. i.e ${
       peter.houseCost - housePrice
     } more than actual price of the house`
   );
 } else {
   console.log(
-    `peter is paying too little. i.e ${
+    `Peter is paying too little. i.e ${
       housePrice - peter.houseCost
     } less than actual price of the house.`
   );
@@ -37,20 +35,18 @@ if (housePrice < peter.houseCost) {
 
 //julie's house price calculation
 volumeInMeters2 = julie.wide * julie.deep * julie.high;
-console.log(volumeInMeters2);
 
 housePrice = volumeInMeters2 * 2.5 * 1000 + julie.gardenSizeInM2 * 300;
-console.log(housePrice);
 
 if (housePrice < julie.houseCost) {
   console.log(
-    `julie is paying too much. i.e ${
+    `Julie is paying too much. i.e ${
       julie.houseCost - housePrice
     } more than actual price of the house`
   );
 } else {
   console.log(
-    `julie is paying too little. i.e ${
+    `Julie is paying too little. i.e ${
       housePrice - julie.houseCost
     } less than actual price of the house.`
   );
