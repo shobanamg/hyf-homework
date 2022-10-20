@@ -8,7 +8,7 @@ const firstWords = [
   "Party",
   "Pizza",
   "Acron",
-  "silver",
+  "silver"
 ];
 
 const secondWords = [
@@ -21,7 +21,7 @@ const secondWords = [
   "Plex",
   "Factor",
   "Crafts",
-  "singles",
+  "singles"
 ];
 
 const randomNumber = Math.floor(Math.random() * 10);
