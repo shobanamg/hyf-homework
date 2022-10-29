@@ -1,5 +1,6 @@
+/****** Exercise 1: Flight booking ******/
 function getFullname(firstname, surname) {
-  return firstname + " " + surname;
+    return firstname + " " + surname;
 }
 
 const fullname1 = getFullname("Benjamin", "Hughes");
@@ -10,13 +11,13 @@ console.log(fullname2);
 
 //FormalFullname
 function getFormalFullname(firstname, surname, useFormalName = true, gender) {
-  if (useFormalName && gender) {
-    if (gender === "male") {
-      return "lord" + " " + firstname + " " + surname;
+    if (useFormalName && gender) {
+        if (gender === "male") {
+            return "Lord" + " " + firstname + " " + surname;
+        }
+        return "Lady" + " " + firstname + " " + surname;
     }
-    return "lady" + " " + firstname + " " + surname;
-  }
-  return firstname + " " + surname;
+    return firstname + " " + surname;
 }
 
 const fullname3 = getFormalFullname("Benjamin", "Hughes", true, "male");
