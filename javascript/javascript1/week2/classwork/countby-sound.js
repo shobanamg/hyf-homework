@@ -11,7 +11,7 @@
 ];
 
 for (i = 0; i < names.length; i++) {
-  if (names[i].toLowerCase().includes("a") === true) continue;
+  if (names[i].toLowerCase().includes("a")) continue;
     console.log(names[i]);
 }
 
@@ -20,7 +20,6 @@ for (j = 0; j < names.length; j++) {
   if (names[j] === searchName) {
     console.log(j, `Yes It is ${names[j]}`);
     break;
-  }else{
+  }
     console.log(`${names[j]} is not ${searchName}`);
-}
 }
