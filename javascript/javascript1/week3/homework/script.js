@@ -40,3 +40,53 @@ function findTravelTime(travelInformation) {
 
 const travelTime = findTravelTime(travelInformation)
 console.log(travelTime);
+
+/**** Exercise3: Series duration of my life ****/
+const seriesDurations = [
+    {
+        title: "Game of thrones",
+        days: 3,
+        hours: 1,
+        minutes: 0,
+    },
+    {
+        title: "Sopranos",
+        days: 3,
+        hours: 14,
+        minutes: 0,
+    },
+    {
+        title: "The Wire",
+        days: 2,
+        hours: 12,
+        minutes: 0,
+    },
+];
+
+
+seriesDurations.push({
+    title: "Virgin River",
+    days: 1,
+    hours: 7,
+    minutes: 30,
+})
+
+console.log(seriesDurations)
+
+function logOutSeriesText() {
+    //approximately I'm considering 365 days per Year
+    const lifeTimeInMinutes = 80 * 365 * 24 * 60;
+    let totalSeriesDurationInPercentage = 0;
+    seriesDurations.forEach((seriesDuration) => {
+        const seriesDurationInMinutes = seriesDuration.days * 24 * 60 + seriesDuration.hours * 60 + seriesDuration.minutes;
+        const seriesDurationInPercentage = (seriesDurationInMinutes / lifeTimeInMinutes) * 100;
+        console.log(seriesDuration.title, "took", seriesDurationInPercentage.toFixed(3), "of my life");
+        totalSeriesDurationInPercentage = totalSeriesDurationInPercentage + seriesDurationInPercentage;
+
+    })
+    console.log("In total that is", totalSeriesDurationInPercentage.toFixed(3), "of my life");
+
+}
+
+logOutSeriesText();
+
