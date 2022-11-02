@@ -128,3 +128,45 @@ function logOutNotesFormatted() {
 logOutNotesFormatted();
 
 
+/**** Exercise5: CactusIO-interactive (Smart phone usage app) optional ****/
+//Adding an activity
+const activities = [];
+
+function getTotalDuration() {
+    let totalDuration = 0;
+    for (let activity of activities) {
+        totalDuration += activity.duration;
+    }
+    return totalDuration;
+}
+
+function addActivity(activity, duration) {
+    if (100 - getTotalDuration() < duration) {
+        console.log(`You have reached your Limit, no more smartphoning for you`)
+        return;
+    }
+    let a = {date: new Date(), activity, duration}
+    activities.push(a);
+}
+
+addActivity("Youtube", 30);
+addActivity("netflix", 30);
+addActivity("movie", 18);
+addActivity("netflix", 30);
+
+
+console.log(activities);
+
+//Show my status
+function showStatus(activities) {
+    if (activities.length === 0) {
+        console.log("Add some activities before calling showStatus");
+
+    } else {
+        console.log(`You have added ${activities.length} activities. They amount to ${getTotalDuration()}min. of usage`);
+    }
+}
+
+activities2 = []
+showStatus(activities);
+showStatus(activities2);
