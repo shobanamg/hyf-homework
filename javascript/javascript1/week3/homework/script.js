@@ -1,5 +1,4 @@
-/**** Exercise1: Item array removal
- ****/
+/**** Exercise1: Item array removal ****/
 const names = [
     "Peter",
     "Ahmad",
@@ -82,11 +81,50 @@ function logOutSeriesText() {
         const seriesDurationInPercentage = (seriesDurationInMinutes / lifeTimeInMinutes) * 100;
         console.log(seriesDuration.title, "took", seriesDurationInPercentage.toFixed(3), "of my life");
         totalSeriesDurationInPercentage = totalSeriesDurationInPercentage + seriesDurationInPercentage;
-
     })
     console.log("In total that is", totalSeriesDurationInPercentage.toFixed(3), "of my life");
-
 }
 
 logOutSeriesText();
+
+
+/**** Exercise4: NOnoN0nOYes (Note taking app) ****/
+//set a note
+const notes = [];
+
+function saveNote(content, id) {
+    notes.push({content, id})
+}
+
+saveNote("Pick up groceries", 1);
+saveNote("Do laundry", 2);
+
+console.log(notes);
+
+//Get a note
+function getNote(id) {
+    if (id === undefined || isNaN(id)) {
+        console.log(`Please enter a valid id`);
+        return;
+    }
+    for (let note of notes) {
+        if (id === note.id)
+            return note;
+    }
+}
+
+const firstNote = getNote(1);
+getNote();
+
+console.log(firstNote);
+
+//Log out notes
+function logOutNotesFormatted() {
+    for (let note of notes) {
+        console.log(`The note with id: ${note.id}, has the following note text: "${note.content}".`);
+    }
+}
+
+logOutNotesFormatted();
+
 
