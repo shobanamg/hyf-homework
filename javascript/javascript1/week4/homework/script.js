@@ -1,3 +1,4 @@
+/*** Voice assistant ***/
 let myName = "";
 const todo = [];
 
@@ -53,9 +54,11 @@ function getReply(command) {
     } else if (command.startsWith("Set a timer for") && command.endsWith("minutes")) {
         const count = command.replace("Set a timer for", "").replace("minutes", "")
         setTimeout(startTimer, count * 60000);
+
         function startTimer() {
             console.log(`Timer Done`)
         }
+
         return `Timer set for ${count} minutes!`;
     } else {
         return `This command is not available`
