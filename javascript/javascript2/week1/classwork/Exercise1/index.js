@@ -24,15 +24,15 @@ function alertonClick() {
 }
 
 //Try entering something into the field below, click somewhere else to trigger the event
-const input = document.querySelector('input');
+const myInput = document.querySelector('input');
 const log = document.querySelector('#log');
-input.addEventListener('change', updateValue);
+myInput.addEventListener('change', updateValue);
 
 function updateValue(e) {
     log.innerText = e.target.value;
 }
 
-input.addEventListener('focus', function (event) {
+myInput.addEventListener('focus', function (event) {
     event.target.style.background = 'limegreen';
 });
 
