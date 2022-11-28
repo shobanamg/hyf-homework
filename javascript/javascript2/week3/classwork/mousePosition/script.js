@@ -3,19 +3,20 @@
 // To find what this function is called go to google! What should we search for???
 let position = [];
 
-document.addEventListener('mousemove', (event) => {
-  position.push({x: event.clientX, y: event.clientY})
-})
+document.addEventListener("mousemove", (event) => {
+  position.push({ x: event.clientX, y: event.clientY });
+});
 
 const positionPrinter = () => {
-  const xAverage = position.reduce((acc, cur) => cur.x + acc, 0)
-      / position.length;
-  const yAverage = position.reduce((acc, cur) => cur.y + acc, 0)
-      / position.length;
-  console.log('The average x and y positions are', Math.floor(xAverage),
-      Math.floor(yAverage));
-  // position = [];
-  // setTimeout(positionPrinter, 3000)
-}
+  const xAverage =
+    position.reduce((acc, cur) => cur.x + acc, 0) / position.length;
+  const yAverage =
+    position.reduce((acc, cur) => cur.y + acc, 0) / position.length;
+  console.log(
+    "The average x and y positions are",
+    Math.floor(xAverage),
+    Math.floor(yAverage)
+  );
+};
 
-setTimeout(positionPrinter, 3000)
+setTimeout(positionPrinter, 30000);
