@@ -8,7 +8,6 @@ let lCounter = 0;
 let isGameStarted = false;
 
 const startGame = () => {
-  console.log(typeof setSeconds.value);
   if (isNaN(setSeconds.value) || setSeconds.value === "") {
     alert("Please enter a valid time in seconds to start the game");
     return;
@@ -16,15 +15,15 @@ const startGame = () => {
   isGameStarted = !isGameStarted;
   setTimeout(() => {
     if (sCounter === lCounter) {
-      sBoard.innerHTML = `<br><span> Count : ${sCounter} </span>`;
-      lBoard.innerHTML = `<br><span> Count : ${lCounter} </span>`;
+      sBoard.innerHTML = ` Count : ${sCounter} `;
+      lBoard.innerHTML = ` Count : ${lCounter} `;
       alert("It is draw");
     } else if (sCounter > lCounter) {
-      sBoard.innerHTML = `<br><span> Count : ${sCounter}<br> You Won!</span>`;
-      lBoard.innerHTML = `<br><span> Count : ${lCounter}<br> You Lost </span>`;
+      sBoard.innerHTML = ` Count : ${sCounter} You Won!`;
+      lBoard.innerHTML = ` Count : ${lCounter} You Lost `;
     } else {
-      lBoard.innerHTML = `<br><span> Count : ${lCounter}<br> You Won! </span>`;
-      sBoard.innerHTML = `<br><span> Count : ${sCounter}<br> You Lost </span>`;
+      lBoard.innerHTML = ` Count : ${lCounter} You Won! `;
+      sBoard.innerHTML = ` Count : ${sCounter} You Lost `;
     }
     isGameStarted = !isGameStarted;
     sCounter = 0;
