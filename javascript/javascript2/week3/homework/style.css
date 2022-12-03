@@ -1,0 +1,52 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.btn, .btn1, .btn2 {
+  width: 10rem;
+  height: 3rem;
+  background-color: mediumseagreen;
+  border-radius: .25rem;
+  border: none;
+  box-shadow: .01rem .01rem #333;
+  color: white;
+  font-size: .9rem;
+  font-weight: 800;
+}
+
+.box {
+  width: 8rem;
+  height: 5rem;
+  background-color: coral;
+  border-radius: .25rem;
+  border: none;
+  box-shadow: .01rem .01rem #333;
+  color: white;
+  font-size: .9rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.sBox {
+  background-color: coral;
+}
+.lBox {
+  background-color: cornflowerblue;
+}
+
+.container {
+  width: 20rem;
+  display: flex;
+  margin-top: 4rem ;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
