@@ -67,7 +67,7 @@ console.log(averageRatingOfAllMovies);
 // goodMovies: 123} Optional
 const moviesTaggedBasedOnRating = taggedMovies.map((movie) => movie.tag);
 console.log(moviesTaggedBasedOnRating);
-const MovieOccurrences = moviesTaggedBasedOnRating.reduce((acc, cur) => {
+const movieOccurrences = moviesTaggedBasedOnRating.reduce((acc, cur) => {
   if (cur in acc) {
     acc[cur] = acc[cur] + 1;
   } else {
@@ -76,4 +76,4 @@ const MovieOccurrences = moviesTaggedBasedOnRating.reduce((acc, cur) => {
   return acc;
 }, {});
 
-console.log(MovieOccurrences);
+console.log(movieOccurrences);
