@@ -1,23 +1,4 @@
-/*
-JSON
-JSON stands for JavaScript Object Notation
-JSON is a lightweight format for storing and transporting data
-JSON is often used when data is sent from a server to a web page
-Typical example of json: 
-https://jsonplaceholder.typicode.com/users
-For validating your JSON
-https://jsonlint.com/
-The most important rules:
-JSON names require double quotes.
-No trailing commas
-In JSON, values must be one of the following data types:
-a string
-a number
-an object (JSON object)
-an array
-a boolean
-null
-*/
+import mealOrder from "./mealOrder.json" assert { type: "json" };
 
 const jsonTest = '{"name":"shobana","age": 34, "gender": "female"}';
 console.log(jsonTest);
@@ -31,7 +12,7 @@ const jsObj = { name: "shobana", age: 34, gender: "female" };
 console.log(JSON.stringify(jsObj));
 
 //Meal ordering website
-const mealOrder = [
+const mealOrder1 = [
   {
     name: "pizza",
     id: 112,
@@ -47,11 +28,11 @@ const mealOrder = [
     extras: "lettuce",
   },
 ];
-console.log(mealOrder);
-console.log(mealOrder[mealOrder.length - 1].name);
-console.log(mealOrder[mealOrder.length - 1].price);
+console.log(mealOrder1);
+console.log(mealOrder1[mealOrder1.length - 1].name);
+console.log(mealOrder1[mealOrder1.length - 1].price);
 
-const mealOrderString = JSON.stringify(mealOrder);
+const mealOrderString = JSON.stringify(mealOrder1);
 console.log(mealOrderString);
 console.log(mealOrderString[mealOrderString.length - 1].name);
 
@@ -60,3 +41,7 @@ const mealOrderString2 =
 
 const mealOrderObject = JSON.parse(mealOrderString2);
 console.log(mealOrderObject[mealOrderObject.length - 1].name);
+
+// fetch("mealOrder.json")
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));

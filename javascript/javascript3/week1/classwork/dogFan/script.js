@@ -10,23 +10,36 @@
 //     });
 // }, 2000);
 
-const getRandomImage = async (breed) => {
-  return data.message;
-};
+// const getRandomImage = async (breed) => {
+//   return data.message;
+// };
+//
+// fetch("https://dog.ceo/api/breeds/list/all")
+//   .then((response) => response.json())
+//   .then((data) => {
+//     const result = Object.keys(data.message).map(async (breed) => {
+//       let { message } = await fetch(
+//         `https://dog.ceo/api/breed/${breed}/images/random`
+//       )
+//         .then((response) => response.json())
+//         .then((data) => data);
+//       document
+//         .querySelector(".breed-image-container")
+//         .appendChild((document.createElement("img").src = `${message}`));
+//     });
+//     console.log(result);
+//     document.querySelector(".breed-image-container").innerHTML = "";
+//   });
 
-fetch("https://dog.ceo/api/breeds/list/all")
+fetch(" https://dog.ceo/api/breeds/image/random")
   .then((response) => response.json())
   .then((data) => {
-    const result = Object.keys(data.message).map(async (breed) => {
-      let { message } = await fetch(
-        `https://dog.ceo/api/breed/${breed}/images/random`
-      )
-        .then((response) => response.json())
-        .then((data) => data);
-      document
-        .querySelector(".breed-image-container")
-        .appendChild((document.createElement("img").src = `${message}`));
-    });
-    console.log(result);
-    document.querySelector(".breed-image-container").innerHTML = "";
+    console.log(data.message);
+    const breedName =
+      data.message.split("/")[data.message.split("/").length - 2];
+    console.log(breedName);
+    document.querySelector(
+      ".image-container"
+    ).innerHTML = `<img src="${data.message}" width="500" height="500" alt="dog img">
+<h1>${breedName}</h1>`;
   });
