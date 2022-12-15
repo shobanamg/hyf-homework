@@ -53,7 +53,7 @@ const convert = async (fromCurrency, toCurrency, amount) => {
   try {
     const data = await getCurrenciesAndRates(fromCurrency);
     const rate = data.rates[toCurrency];
-    outputAmount.innerHTML = `${rate * amount} DKK`;
+    outputAmount.innerHTML = `${rate * amount} ${toCurrency}`;
   } catch (err) {
     console.error(err);
     return "something went wrong";
