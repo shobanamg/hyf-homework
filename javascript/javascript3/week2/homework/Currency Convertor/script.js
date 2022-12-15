@@ -3,6 +3,8 @@ const currencySelector2 = document.querySelector(".select-two");
 const inputAmount = document.querySelector(".input-amount");
 const outputAmount = document.querySelector(".output-amount");
 const convertButton = document.querySelector(".convert-button");
+const refreshButton = document.querySelector(".refresh-button");
+const result = document.querySelector(".result");
 
 const BASE_URL = "https://open.er-api.com";
 const getCurrenciesAndRates = async (fromCurrency) => {
@@ -41,11 +43,10 @@ convertButton.addEventListener("click", () => {
   let fromCurrency = currencySelector1.value;
   let toCurrency = currencySelector2.value;
   let amount = inputAmount.value;
-
-  if (fromCurrency !== toCurrency) {
+  if (fromCurrency !== toCurrency && amount !== "") {
     convert(fromCurrency, toCurrency, amount);
   } else {
-    alert("These are the same currency, please choose different currencies");
+    alert("Please enter the valid details");
   }
 });
 
@@ -53,9 +54,13 @@ const convert = async (fromCurrency, toCurrency, amount) => {
   try {
     const data = await getCurrenciesAndRates(fromCurrency);
     const rate = data.rates[toCurrency];
-    outputAmount.innerHTML = `${rate * amount} ${toCurrency}`;
+    outputAmount.innerHTML = `${rate * amount}`;
+    result.innerHTML = `${amount} ${fromCurrency} =
+     ${rate * amount} ${toCurrency}`;
   } catch (err) {
     console.error(err);
     return "something went wrong";
   }
 };
+
+refreshButton.addEventListener("click", () => location.reload());

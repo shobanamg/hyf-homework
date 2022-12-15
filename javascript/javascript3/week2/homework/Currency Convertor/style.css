@@ -71,7 +71,7 @@ body {
     text-align: end;
 }
 
-.convert-button {
+.convert-button, .refresh-button {
     width: 7rem;
     height: 2.25rem;
     border-radius: .15rem;
@@ -85,14 +85,14 @@ body {
     transition: .2s ease-in;
 }
 
-.convert-button:hover {
+.convert-button:hover, .refresh-button:hover {
     border: 2px solid greenyellow;
     background-color: greenyellow;
     color: black;
 }
 
 .output-amount {
-    width: 12rem;
+    width: 20rem;
     height: 4rem;
     margin: 1rem auto;
     text-align: center;
