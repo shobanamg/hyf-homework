@@ -23,18 +23,10 @@ const updateCurrencyDropdown = async () => {
   const ratesAndCurrencies = await getCurrenciesAndRates("USD");
   const currencies = Object.keys(ratesAndCurrencies.rates);
   currencies.forEach((currency) => {
-    currencySelector1.innerHTML += `<option value=${currency}>${currency}</option>)`;
-    currencySelector2.innerHTML += `<option value=${currency}>${currency}</option>)`;
+    currencySelector1.innerHTML += `<option value=${currency} selected=${currency === "EUR"}>${currency}</option>)`;
+    currencySelector2.innerHTML += `<option value=${currency} selected=${currency === "DKK"}>${currency}</option>)`;
   });
 
-  const allOptions1 = currencySelector1.querySelectorAll("option");
-  allOptions1.forEach((option) => {
-    if (option.value === "EUR") option.selected = true;
-  });
-  const allOptions2 = currencySelector2.querySelectorAll("option");
-  allOptions2.forEach((option) => {
-    if (option.value === "DKK") option.selected = true;
-  });
 };
 
 updateCurrencyDropdown();
