@@ -1,3 +1,5 @@
+"use strict";
+
 const currencySelector1 = document.querySelector(".select-one");
 const currencySelector2 = document.querySelector(".select-two");
 const inputAmount = document.querySelector(".input-amount");
