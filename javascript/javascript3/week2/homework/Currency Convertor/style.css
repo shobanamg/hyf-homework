@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    width: 50%;
+    height: 100%;
+    margin: 10rem auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, #000030, blue);
+    border: 2px solid #000030;
+    font-size: 1.25rem;
+    border-radius: .15rem;
+}
+
+.title {
+    font-family: 'Alex Brush', cursive;
+    color: white;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: bold;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.flex-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.input-amount, .select-one, .select-two {
+    width: 6rem;
+    height: 2rem;
+    border: 1px solid #000030;
+    border-radius: .15rem;
+    font-size: 1rem;
+}
+
+.input-amount{
+    text-align: end;
+}
+
+.convert-button, .refresh-button {
+    width: 7rem;
+    height: 2.25rem;
+    border-radius: .15rem;
+    margin-top: .5rem;
+    font-size: 1.25rem;
+    border: 2px solid gold;
+    background-color: gold;
+    color: navy;
+    cursor: pointer;
+    outline: none;
+    transition: .2s ease-in;
+}
+
+.convert-button:hover, .refresh-button:hover {
+    border: 2px solid greenyellow;
+    background-color: greenyellow;
+    color: black;
+}
+
+.output-amount {
+    width: 20rem;
+    height: 4rem;
+    margin: 1rem auto;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: .15rem;
+    background-color: white;
+    color: black;
+}
