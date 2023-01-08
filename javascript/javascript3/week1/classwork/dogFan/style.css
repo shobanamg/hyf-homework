@@ -1,0 +1,21 @@
+.image-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px;
+    height: 1000px;
+    flex-wrap: wrap;
+}
+
+.image-container img{
+    width: 30%;
+    height: 30%;
+    object-fit: cover;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0);
+    border: 1px solid rgba(255,255,255,0.5);
+    margin: 10px;
+    cursor: pointer;
+}
+
+

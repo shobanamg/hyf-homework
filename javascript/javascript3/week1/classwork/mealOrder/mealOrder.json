@@ -1,0 +1,16 @@
+{
+  "mealOrder": [{
+    "name": "pizza",
+    "id": 112,
+    "Price": 100,
+    "drinks": ["Sprite", "Fanta"],
+    "extras": "cheese"
+  }, {
+    "name": "FriedRice",
+    "id": 113,
+    "price": 120,
+    "drinks": ["Sprite", "Fanta"],
+    "extras": "lettuce"
+  }]
+}
+
