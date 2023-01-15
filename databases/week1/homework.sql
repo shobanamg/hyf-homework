@@ -55,10 +55,10 @@ from task t
          join status s on t.status_id = s.id;
 
 /* Get the name of each status, along with a count of how many tasks have that status */
-select s.name, count(s.id) as status_count
+select s.name, count(t.id) as status_count
 from task t
          join status s on t.status_id = s.id
-group by s.id;
+group by s.name;
 
 /* Get the names of all statuses, sorted by the status with most tasks first */
 select s.name, count(t.id) status_count
