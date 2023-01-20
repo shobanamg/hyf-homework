@@ -3,21 +3,11 @@
 Create a new database containing the following tables:
 Class: with the columns: id, name, begins (date), ends (date)
 Student: with the columns: id, name, email, phone, class_id (foreign key)
-
-
-If you are done with the above tasks, you can continue with these advanced tasks:
-Create an index on the name column of the student table.
-Add a new column to the class table named status which can only have the following
-   values: not-started, ongoing, finished (hint: enumerations).
  */
-
-SET NAMES utf8mb4;
 
 create database if not exists `hyfschool`;
 
 use `hyfschool`;
-
-
 
 drop table if exists `student`;
 
@@ -51,8 +41,12 @@ insert into student ( name, email, phone, class_id) values ( 'Lucila Tiger', 'lu
 insert into student ( name, email, phone, class_id) values ( 'Hosea Jack', 'hoseajack@nymag.com',  '302-678-7931' , 2);
 insert into student ( name, email, phone, class_id) values ( 'Jeffie Pernell', 'jfrenold@comcast.net', '891-952-6749' ,3);
 
-
-/* advanced tasks: */
+/*
+If you are done with the above tasks, you can continue with these advanced tasks:
+Create an index on the name column of the student table.
+Add a new column to the class table named status which can only have the following
+   values: not-started, ongoing, finished (hint: enumerations).
+ */
 CREATE INDEX index_name
     ON student (name);
 

@@ -1,60 +1,41 @@
 /*
- Part 2: School database
-Create a new database containing the following tables:
-Class: with the columns: id, name, begins (date), ends (date)
-Student: with the columns: id, name, email, phone, class_id (foreign key)
-
-
-If you are done with the above tasks, you can continue with these advanced tasks:
-Create an index on the name column of the student table.
-Add a new column to the class table named status which can only have the following
-   values: not-started, ongoing, finished (hint: enumerations).
+Get all the tasks assigned to users whose email ends in @spotify.com
+Get all the tasks for 'Donald Duck' with status 'Not started'
+Get all the tasks for 'Maryrose Meadows' that were created in september (hint: month(created)=month_number)
+Find how many tasks where created in each month, e.g. how many tasks were created in october,
+ how many tasks were created in november, etc. (hint: use group by)
  */
+use `hyfmodels2`;
 
-SET NAMES utf8mb4;
+/*  Get all the tasks assigned to users whose email ends in @spotify.com */
+select u.id, u.name, u.email, ut.task_id, t.title
+from user u
+         join user_task ut on u.id = ut.user_id
+         join task t on ut.task_id = t.id
+where email like '%@spotify.com';
 
-create database if not exists `hyfschool`;
+/*  Get all the tasks for 'Donald Duck' with status 'Not started' */
+select u.id, u.name, ut.task_id, t.title, s.name
+from user u
+         join user_task ut on u.id = ut.user_id
+         join task t on ut.task_id = t.id
+         join status s on t.status_id = s.id
+where u.name = 'Donald Duck'
+  and s.name = 'Not started';
 
-use `hyfschool`;
+/* Get all the tasks for 'Maryrose Meadows' that were created in september
+   (hint: month(created)=month_number) */
+select t.title, u.name, month(t.created)
+from user u
+         join user_task ut on u.id = ut.user_id
+         join task t on ut.task_id = t.id
+where month(t.created) = 9 and
+        u.name = 'Maryrose Meadows';
 
-
-
-drop table if exists `student`;
-
-drop table if exists `class`;
-
-
-CREATE TABLE `class` (
-                         `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-                         `name` varchar(255) NOT NULL,
-                         `begins`  DATE NOT NULL,
-                         `ends`  DATE  NULL,
-                         PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-CREATE TABLE `student` (
-                           `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-                           `name` varchar(255) NOT NULL,
-                           `email` varchar(255) NOT NULL,
-                           `phone` varchar(255) NULL,
-                           `class_id` int(10) unsigned NOT NULL,
-                           PRIMARY KEY (`id`),
-                           CONSTRAINT `fk_student` FOREIGN KEY (`class_id`) REFERENCES `class` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-
-insert into class ( name, begins, ends) values ( 'maths','2017-09-26' , null);
-insert into class ( name, begins, ends) values ( 'science', '2015-03-08' , '2020-05-12');
-insert into class ( name, begins, ends) values ( 'english',  '2020-09-26' , null);
-
-insert into student ( name, email, phone, class_id) values ( 'Lucila Tiger', 'lucilatiger@lulu.com','635-572-8467' , 1);
-insert into student ( name, email, phone, class_id) values ( 'Hosea Jack', 'hoseajack@nymag.com',  '302-678-7931' , 2);
-insert into student ( name, email, phone, class_id) values ( 'Jeffie Pernell', 'jfrenold@comcast.net', '891-952-6749' ,3);
+/* Find how many tasks where created in each month, e.g. how many tasks were created in october,
+ how many tasks were created in november, etc. (hint: use group by) */
+select monthname(t.created) as month, count(t.id) as total_tasks from task t group by monthname(t.created)
 
 
-/* advanced tasks: */
-CREATE INDEX index_name
-    ON student (name);
 
-ALTER TABLE class
-    ADD status ENUM('not-started', 'ongoing', 'finished') not null default 'not-started';
+
