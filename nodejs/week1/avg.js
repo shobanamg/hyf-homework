@@ -1,7 +1,5 @@
 const args = process.argv.slice(2);
-const numbers = args
-  .map((arg) => parseFloat(arg))
-  .filter((n) => !isNaN(n) && n !== "");
+const numbers = args.map(parseFloat).filter((n) => !isNaN(n));
 if (numbers.length === 0) {
   console.log("Error: No valid arguments found");
 } else {
