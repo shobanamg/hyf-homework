@@ -38,10 +38,10 @@ const getDocumentById = (req, res) => {
 
 const getDocumentsByQuery = (req, res) => {
   try {
-    const filteredDocuments = searchDocumentsByQuery(req.query.q);
-    filteredDocuments.length > 0
-      ? res.status(200).json(filteredDocuments)
-      : res.status(200).json(documents);
+    const filteredDocuments = req.query.q
+      ? searchDocumentsByQuery(req.query.q)
+      : documents;
+    res.status(200).json(filteredDocuments);
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Failed to retrieve the document" });
@@ -53,7 +53,7 @@ const getDocumentsByFieldsOrQuery = (req, res) => {
     const fields = req.body.fields;
     const q = req.query.q;
 
-    if ((fields && q) || (!fields && !q)) {
+    if (fields && q) {
       return res
         .status(400)
         .json({ message: "Bad request, Please provide fields or query" });
@@ -66,6 +66,8 @@ const getDocumentsByFieldsOrQuery = (req, res) => {
     if (!fields && q) {
       return res.status(200).json(searchDocumentsByQuery(q));
     }
+
+    return res.status(200).json(documents);
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Failed to retrieve the documents" });
