@@ -1,6 +1,7 @@
 import React from "react";
 
-const TodoItem = ({ description, deadline }) => {
+const TodoItem = ({ todo }) => {
+  const { description, deadline } = todo;
   return (
     <div className="todo-item">
       <li>
