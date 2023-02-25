@@ -24,12 +24,7 @@ const TodoList = () => {
     <div className="todo-list">
       <ul>
         {todos.map((todo) => (
-          <TodoItem
-            key={todo.id}
-            description={todo.description}
-            deadline={todo.deadline}
-            todo={todo}
-          />
+          <TodoItem key={todo.id} todo={todo} />
         ))}
       </ul>
     </div>
