@@ -1,15 +1,15 @@
 import React, { useContext } from "react";
 import TodoItem from "./TodoItem";
-import addRandomTodo from "../handlers/addRandomTodo";
 import { TodoContext } from "../context/TodoContext";
 import Timer from "./Timer";
+import { ADD_TODO } from "../constants/todoActions";
 
 const TodoList = () => {
-  const { todoList, setTodoList } = useContext(TodoContext);
+  const { todoList, dispatch } = useContext(TodoContext);
   return (
     <div className="todo-list">
-      <div>You have used {<Timer />}seconds on this Website</div>
-      <button onClick={() => addRandomTodo(todoList, setTodoList)}>
+      <p>You have used {<Timer />}seconds on this Website</p>
+      <button onClick={() => dispatch({ type: ADD_TODO })}>
         Add Random todoItem
       </button>
       <span>{todoList.length ? "" : " No items"}</span>

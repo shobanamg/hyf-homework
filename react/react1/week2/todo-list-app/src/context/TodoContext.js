@@ -1,5 +1,6 @@
-import { createContext, useState } from "react";
+import { createContext, useReducer } from "react";
 import todos from "../todoList.json";
+import { TodoReducer } from "../reducer/TodoReducer";
 
 const INITIAL_CONTEXT = {
   todos: todos,
@@ -7,10 +8,10 @@ const INITIAL_CONTEXT = {
 
 export const TodoContext = createContext(INITIAL_CONTEXT);
 export const TodoContextProvider = ({ children }) => {
-  const [todoList, setTodoList] = useState(INITIAL_CONTEXT.todos);
+  const [todoList, dispatch] = useReducer(TodoReducer, INITIAL_CONTEXT.todos);
 
   return (
-    <TodoContext.Provider value={{ todoList, setTodoList }}>
+    <TodoContext.Provider value={{ todoList, dispatch }}>
       {children}
     </TodoContext.Provider>
   );

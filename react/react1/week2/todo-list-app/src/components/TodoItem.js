@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
-import handleToggle from "../handlers/handleToggle";
-import handleDelete from "../handlers/handleDelete";
 import { TodoContext } from "../context/TodoContext";
+import { DELETE_TODO, COMPLETE_TODO } from "../constants/todoActions";
 
 const TodoItem = ({ todo }) => {
   const { id, description, done } = todo;
-  const { todoList, setTodoList } = useContext(TodoContext);
+  const { dispatch } = useContext(TodoContext);
 
   return (
     <div className="todo-item">
@@ -15,9 +14,9 @@ const TodoItem = ({ todo }) => {
       <input
         type="checkbox"
         checked={done}
-        onChange={() => handleToggle(id, todoList, setTodoList)}
+        onChange={() => dispatch({ type: COMPLETE_TODO, payload: id })}
       />
-      <button onClick={() => handleDelete(id, todoList, setTodoList)}>
+      <button onClick={() => dispatch({ type: DELETE_TODO, payload: id })}>
         Delete
       </button>
     </div>

@@ -2,15 +2,16 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 const Timer = () => {
-  const [timer, setTimer] = useState(0);
+  const [time, setTime] = useState(0);
 
   useEffect(() => {
-    setTimeout(() => {
-      setTimer((count) => count + 1);
+    const timer = setTimeout(() => {
+      setTime((count) => count + 1);
     }, 1000);
-  }, [timer]);
+    return () => clearTimeout(timer);
+  }, [time]);
 
-  return <span>{timer}</span>;
+  return <span>{time}</span>;
 };
 
 export default Timer;
