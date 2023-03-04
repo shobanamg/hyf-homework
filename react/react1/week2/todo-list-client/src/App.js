@@ -1,13 +1,14 @@
-import "./App.css";
 import Header from "./components/Header";
 import TodoList from "./components/TodoList";
 import { TodoContextProvider } from "./context/TodoContext";
+import AddTodo from "./components/AddTodo";
 
 function App() {
   return (
-    <div className="App">
+    <div className="max-w-md mx-auto py-8 my-10">
       <Header />
       <TodoContextProvider>
+        <AddTodo />
         <TodoList />
       </TodoContextProvider>
     </div>
