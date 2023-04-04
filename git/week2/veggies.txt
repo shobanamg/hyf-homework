@@ -1,5 +1,6 @@
 Carrot
 Beans
+Beatroot
 Tomato
 Potato
 Broccoli
